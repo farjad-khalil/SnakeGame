@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background: url("../images/bg.jpg");
+    min-height: 100vh;
+    background-size: 105vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    background: linear-gradient(#bbe4aa,#85d4a3);
+    width: 90vmin;
+    height: 94vmin; 
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background: linear-gradient(red,orange);
+    border: .25vmin solid rgb(4, 2, 2);
+    transform: scale(1.02);
+    border-radius: 8px;
+
+}
+.snake{
+    background-color: #1d42bb;
+    border: .25vmin solid rgb(216, 216, 216);
+    border-radius:12px;
+}
+.food{
+    background: linear-gradient(#0515c0,#71127e) ;
+    border: .25vmin solid rgb(0, 0, 0);
+    border-radius: 8px;
+}
+#scoreBox{
+    font-family: 'Pangolin', cursive;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    font-size: 2rem;
+}
+.hiscore{
+    font-family: 'Pangolin', cursive;
+    position: absolute;
+    top: 85px;
+    left: 80px;
+    font-size: 2rem;
+}
+.btn{
+    position: absolute;
+
+    border: 2px solid black;
+    padding: 0% 2%;
+    font-size: 2rem;
+    border-radius: 5%;
+    font-family:'Pangolin';
+}
+.easy{
+    top: 40vmin;
+    left: 20vmin;
+}
+.med{
+    top: 50vmin;
+    left: 20vmin;
+
+}
+.hard{
+    top: 60vmin;
+    left: 20vmin;
+}
+.pressed{
+    background-color: #000;
+    color: white;
+    text-shadow:2px 1px 4px #000000;
+}
+
+@media (max-width:650px ) {
+    .body{
+        justify-content: center;
+        align-items: start;
+    }
+    .board{
+        width: 100vmin;
+        height: 90vmin; 
+    }
+    .btn{
+    
+        padding: 0% 2%;
+        font-size: 2rem;
+    }
+    .easy{
+        top: 100vmin;
+        left: 14vmin;
+    }
+    .med{
+        top: 100vmin;
+        left: 42vmin;
+    
+    }
+    .hard{
+        top: 100vmin;
+        left: 75vmin;
+    }
+    #scoreBox{
+        top: 15px;
+        left: 20px;
+        font-size: 2rem;
+    }
+    .hiscore{
+        top: 45px;
+        left: 20px;
+        font-size: 2rem;
+    }
+}
